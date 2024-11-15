@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.9156a1f6.css",
-    "main.js": "/my-portfolio/static/js/main.f5e15b1f.js",
+    "main.css": "/my-portfolio/static/css/main.eb195c88.css",
+    "main.js": "/my-portfolio/static/js/main.66348bcb.js",
     "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/54.png": "/my-portfolio/static/media/54.c63463b5bfeb5cfd6db6.png",
+    "static/media/hero-pic2.jpg": "/my-portfolio/static/media/hero-pic2.7b15296f8fbd9b4ae200.jpg",
+    "static/media/fa-solid-900.ttf": "/my-portfolio/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/my-portfolio/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/my-portfolio/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/my-portfolio/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/fa-regular-400.ttf": "/my-portfolio/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/my-portfolio/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/my-portfolio/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/my-portfolio/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/my-portfolio/index.html",
-    "main.9156a1f6.css.map": "/my-portfolio/static/css/main.9156a1f6.css.map",
-    "main.f5e15b1f.js.map": "/my-portfolio/static/js/main.f5e15b1f.js.map",
+    "main.eb195c88.css.map": "/my-portfolio/static/css/main.eb195c88.css.map",
+    "main.66348bcb.js.map": "/my-portfolio/static/js/main.66348bcb.js.map",
     "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9156a1f6.css",
-    "static/js/main.f5e15b1f.js"
+    "static/css/main.eb195c88.css",
+    "static/js/main.66348bcb.js"
   ]
 }
