@@ -1,0 +1,60 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 3rem;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  max-width: 50%; /* Prevent hero-left from stretching to full width */
+}
+
+.hero-left h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4.4rem;
+  font-weight: 100;
+  color: #2C2D5B;
+  margin: 0;
+}
+
+.hero-left h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #2C2D5B;
+  line-height: 1.2;
+  margin: 0.2rem 0;
+}
+
+.hero-left p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #2C2D5B;
+  margin-top: 1rem;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 500px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
