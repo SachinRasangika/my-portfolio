@@ -1,0 +1,156 @@
+.selected-works {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header Styles */
+  .selected-works .header {
+    margin-bottom: 3rem;
+  }
+  
+  .selected-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .selected-works p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Emoji Image */
+  .image-container {
+    margin-top: 1rem;
+  }
+  
+  .emoji-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  /* Projects Grid */
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  }
+  
+  .project-image {
+    width: 100%; /* Full width of the card */
+    height: 100%; /* Full height of the card */
+    object-fit: cover; /* Cover the entire card without stretching */
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.1);
+  }
+  
+  /* Project Info */
+  .project-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333; /* Darker text color for visibility */
+    opacity: 0;
+    transition: opacity 0.4s ease, background-color 0.4s ease;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* On hover, make the background solid white */
+  .project-card:hover .project-info {
+    opacity: 1;
+    background-color: #fff; /* Solid white background */
+  }
+  
+  /* Project Name */
+  .project-name {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* Project Description */
+  .project-description {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  /* See More Button */
+  .see-more-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  
+  .project-card:hover .see-more-button {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  .see-more-button:hover {
+    background-color: #0056b3;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Show More Button Below the Card */
+  .card-footer {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .show-more-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .show-more-button:hover {
+    background-color: #218838;
+    transition: all 0.3s ease-in-out;
+  }
+  

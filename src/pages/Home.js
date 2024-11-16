@@ -1,7 +1,9 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import AboutMe from '../components/AboutMe'; // Import the AboutMe component
-import EducationExperience from '../components/EducationExperience'; // Import the EducationExperience component
+import AboutMe from '../components/AboutMe';
+import EducationExperience from '../components/EducationExperience';
+import SelectedWorks from '../components/SelectedWorks'; // Import the SelectedWorks component
+import Feedback from '../components/Feedback'; // Import the Feedback component
 
 const Home = () => {
   return (
@@ -14,6 +16,12 @@ const Home = () => {
 
       {/* Education & Experiences Section */}
       <EducationExperience />
+
+      {/* Selected Works Section */}
+      <SelectedWorks />
+
+      {/* Feedback Section */}
+      <Feedback />
 
       {/* Home Content */}
       <section className="home-content">
