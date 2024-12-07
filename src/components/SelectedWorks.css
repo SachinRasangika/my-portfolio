@@ -1,156 +1,401 @@
 .selected-works {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: #f9f9f9;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.selected-works .header {
+  margin-bottom: 3rem;
+}
+
+.selected-works h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.176;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  margin-top: 0;
+  padding-top: 3.2rem;
+  position: relative;
+}
+
+.selected-works p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  flex-shrink: 0;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.12), 0 20px 20px -10px rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.45s ease;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.screenshot {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.screenshot .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.45s ease;
+}
+
+.card:hover .screenshot .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  padding: 20px;
+  text-align: left;
+}
+
+.title {
+  display: block;
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.description {
+  display: block;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.bottom-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: #3498db;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.45s ease;
+}
+
+.card:hover .bottom-bar {
+  transform: scale(0.9) translateY(-14px);
+}
+
+/* Styling for See More button */
+.see-more-container {
+  margin-top: 2rem;
+}
+
+.see-more-button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #2980b9;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  .selected-works {
+    padding: 3rem 1.5rem;
   }
-  
-  /* Header Styles */
-  .selected-works .header {
-    margin-bottom: 3rem;
-  }
-  
+
   .selected-works h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    font-size: 2rem;
   }
-  
+
   .selected-works p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 1rem;
   }
-  
-  /* Emoji Image */
-  .image-container {
-    margin-top: 1rem;
-  }
-  
-  .emoji-image {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
-  
-  /* Projects Grid */
+
   .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1140px;
-    margin: 0 auto;
+    gap: 1.5rem;
   }
-  
-  /* Project Card */
-  .project-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    position: relative;
-    transition: all 0.4s ease;
+
+  .card {
+    width: 45%;
   }
-  
-  .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+
+  .screenshot {
+    height: 180px;
   }
-  
-  .project-image {
-    width: 100%; /* Full width of the card */
-    height: 100%; /* Full height of the card */
-    object-fit: cover; /* Cover the entire card without stretching */
-    transition: transform 0.4s ease;
-  }
-  
-  .project-card:hover .project-image {
-    transform: scale(1.1);
-  }
-  
-  /* Project Info */
-  .project-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #333; /* Darker text color for visibility */
-    opacity: 0;
-    transition: opacity 0.4s ease, background-color 0.4s ease;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 1rem;
-    border-radius: 8px;
-  }
-  
-  /* On hover, make the background solid white */
-  .project-card:hover .project-info {
-    opacity: 1;
-    background-color: #fff; /* Solid white background */
-  }
-  
-  /* Project Name */
-  .project-name {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  /* Project Description */
-  .project-description {
-    font-size: 1rem;
-    color: #fff;
-    margin: 0.5rem 0 1rem;
-  }
-  
-  /* See More Button */
+
   .see-more-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .selected-works {
+    padding: 2rem 1rem;
+  }
+
+  .selected-works h2 {
+    font-size: 1.8rem;
+  }
+
+  .selected-works p {
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    gap: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .screenshot {
+    height: 150px;
+  }
+
+  .see-more-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+/* Global Styles */
+:root {
+  --primary-color: #3498db; /* Blue */
+  --secondary-color: #e74c3c; /* Red */
+  --accent-color: #f39c12; /* Yellow */
+  --text-color: #333;
+  --sub-text-color: #666;
+  --bg-color: #f9f9f9;
+  --font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+.selected-works {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--bg-color);
+}
+
+.selected-works .header {
+  margin-bottom: 3rem;
+}
+
+.selected-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.selected-works p {
+  font-size: 1.2rem;
+  color: var(--sub-text-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  flex-shrink: 0;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.12), 0 20px 20px -10px rgba(0, 0, 0, 0.125);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.45s ease;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.screenshot {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.screenshot .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.45s ease;
+}
+
+.card:hover .screenshot .overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  padding: 20px;
+  text-align: left;
+}
+
+.title {
+  display: block;
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.description {
+  display: block;
+  font-size: 0.875em;
+  color: var(--sub-text-color);
+}
+
+.bottom-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 0 0 8px 8px;
+  transition: all 0.45s ease;
+}
+
+.card:hover .bottom-bar {
+  transform: scale(0.9) translateY(-14px);
+}
+
+/* Styling for See More button */
+.see-more-container {
+  margin-top: 2rem;
+}
+
+.see-more-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet (up to 768px) */
+@media (max-width: 768px) {
+  .selected-works {
+    padding: 3rem 1.5rem;
+  }
+
+  .selected-works h2 {
+    font-size: 2rem;
+  }
+
+  .selected-works p {
     font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-    opacity: 0;
-    transition: all 0.4s ease;
   }
-  
-  .project-card:hover .see-more-button {
-    opacity: 1;
-    transform: scale(1.05);
+
+  .projects {
+    gap: 1.5rem;
   }
-  
-  .see-more-button:hover {
-    background-color: #0056b3;
-    transition: all 0.3s ease-in-out;
+
+  .card {
+    width: 45%;
   }
-  
-  /* Show More Button Below the Card */
-  .card-footer {
-    padding: 1rem;
-    text-align: center;
+
+  .screenshot {
+    height: 180px;
   }
-  
-  .show-more-button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
+
+  .see-more-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
   }
-  
-  .show-more-button:hover {
-    background-color: #218838;
-    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .selected-works {
+    padding: 2rem 1rem;
   }
-  
+
+  .selected-works h2 {
+    font-size: 1.8rem;
+  }
+
+  .selected-works p {
+    font-size: 0.9rem;
+  }
+
+  .projects {
+    gap: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .screenshot {
+    height: 150px;
+  }
+
+  .see-more-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,155 @@
+/* Contact Section */
+.contact-me {
+  margin: 100px;
+}
+
+.s-contact {
+  padding-top: 18.4rem;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.imoji-i {
+  display: block;
+  margin-right: auto;
+  width: 10%; /* Adjust size as needed */
+}
+
+.contact-email {
+  font-size: 3.2rem;
+  font-weight: 400;
+  margin-right: auto;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.section-desc {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin: 10px 0 30px 0;
+  text-align: left;
+}
+
+.section-desc a {
+  color: #785CD5;
+  text-decoration: none;
+}
+
+.contact-infos {
+  display: flex;
+  justify-content: space-between;
+  background-color: #484AA9;
+  padding: 48px;
+  border-radius: 10px;
+  color: white;
+}
+
+.contact-phone,
+.contact-social {
+  text-align: center;
+}
+
+.contact-phone h4,
+.contact-social h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-phone a,
+.contact-social ul li a {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+}
+
+.contact-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-social ul li {
+  margin: 0 10px;
+}
+
+.contact-social ul li::before {
+  content: "/";
+  margin-right: 5px;
+  color: white;
+}
+
+.contact-social ul li:first-child::before {
+  content: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-me {
+    margin: 50px 20px; /* Adjusted margin for smaller screens */
+  }
+
+  .contact-email {
+    font-size: 2.5rem; /* Smaller font size */
+  }
+
+  .section-desc {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .contact-infos {
+    flex-direction: column; /* Stack phone and social on top of each other */
+    padding: 30px;
+  }
+
+  .contact-phone,
+  .contact-social {
+    margin-bottom: 20px; /* Add space between phone and social */
+  }
+
+  .contact-phone h4,
+  .contact-social h4 {
+    font-size: 1.4rem; /* Smaller heading font size */
+  }
+
+  .contact-phone a,
+  .contact-social ul li a {
+    font-size: 1.4rem; /* Smaller text for phone number and social links */
+  }
+
+  .imoji-i {
+    width: 30%; /* Adjusted avatar size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-email {
+    font-size: 2rem; /* Further reduced font size */
+  }
+
+  .section-desc {
+    font-size: 1.1rem; /* Even smaller font size for smaller screens */
+  }
+
+  .contact-infos {
+    padding: 20px; /* Reduced padding */
+  }
+
+  .contact-phone,
+  .contact-social {
+    text-align: center; /* Center-align phone and social links */
+  }
+
+  .contact-phone a,
+  .contact-social ul li a {
+    font-size: 1.2rem; /* Further reduced font size */
+  }
+
+  .imoji-i {
+    width: 40%; /* Slightly larger avatar for better visibility */
+  }
+}

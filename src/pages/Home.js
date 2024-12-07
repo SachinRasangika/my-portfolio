@@ -2,31 +2,42 @@ import React from 'react';
 import Hero from '../components/Hero';
 import AboutMe from '../components/AboutMe';
 import EducationExperience from '../components/EducationExperience';
-import SelectedWorks from '../components/SelectedWorks'; // Import the SelectedWorks component
-import Feedback from '../components/Feedback'; // Import the Feedback component
+import SelectedWorks from '../components/SelectedWorks';
+import Feedback from '../components/Feedback';
+import ContactMe from '../components/ContactMe';
+
 
 const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <Hero />
+      <section id="intro">
+        <Hero />
+      </section>
 
       {/* About Me Section */}
-      <AboutMe />
+      <section id="about">
+        <AboutMe />
+      </section>
 
       {/* Education & Experiences Section */}
-      <EducationExperience />
+      <section id="education">
+        <EducationExperience />
+      </section>
 
       {/* Selected Works Section */}
-      <SelectedWorks />
+      <section id="works">
+        <SelectedWorks />
+      </section>
 
       {/* Feedback Section */}
-      <Feedback />
+      <section id="feedback">
+        <Feedback />
+      </section>
 
-      {/* Home Content */}
-      <section className="home-content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is the homepage.</p>
+      {/* Contact Me Section */}
+      <section id="contact">
+        <ContactMe />
       </section>
     </div>
   );

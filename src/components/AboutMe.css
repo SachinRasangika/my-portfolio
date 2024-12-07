@@ -1,100 +1,151 @@
-/* Global styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Updated About Me Section */
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: #1c1c1e;
+  background-color: transparent; /* Removed background color */
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1300px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap; /* Enables wrapping on smaller screens */
+}
+
+.text {
+  max-width: 600px;
+  padding-right: 50px;
+  text-align: left;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.176;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  margin-top: 0;
+  padding-top: 3.2rem;
+  position: relative;
+}
+
+.description {
+
+  line-height: 1.8;
+  color: #6e6e73;
+  margin-bottom: 30px;
+}
+
+.about-me__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007aff, #8e44ad);
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 122, 255, 0.4);
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 94, 203, 0.5);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #007aff;
+  border: 2px solid #007aff;
+  transition: 0.4s ease;
+}
+
+.btn-secondary:hover {
+  background: #007aff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Image Section */
+.image img {
+  max-width: 400px;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .about-me-content {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+
+  .text {
+    max-width: 100%;
+    padding-right: 0;
   }
-  
-  h1, p {
-    margin-bottom: 20px;
+
+  .image img {
+    max-width: 300px;
+    margin-top: 20px;
   }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+
+  .about-me__buttons {
+    grid-template-columns: 1fr; /* Stack button vertically */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    padding: 50px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .description {
     font-size: 16px;
   }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  /* About Me Section */
+}
+
+@media (max-width: 480px) {
   .about-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    background-color: #fff;
+    padding: 30px 10px;
   }
-  
-  .about-me-content {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: center;  /* Center the div */
-  }
-  
-  .text {
-    max-width: 600px;
-    padding-right: 50px;
-    text-align: left;  /* Align text to the left */
-  }
-  
+
   h1 {
-    font-size: 36px;
-    color: #333;
-    text-align: left;  /* Ensure heading is aligned left */
+    font-size: 24px;
   }
-  
+
   .description {
-    font-size: 18px;
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-align: left;  /* Ensure description is aligned left */
+    font-size: 14px;
   }
-  
-  .buttons {
-    display: flex;
-    gap: 20px;
-    text-align: left;  /* Align buttons to the left */
-  }
-  
-  .btn {
-    transition: all 0.3s ease;
-  }
-  
-  .btn-primary {
-    background-color: #007BFF;
-    color: white;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #5a6268;
-  }
-  
-  /* Image styles */
+
   .image img {
-    max-width: 400px;
-    border-radius: 10px;
+    max-width: 200px;
   }
-  
+}

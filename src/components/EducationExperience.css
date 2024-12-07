@@ -1,106 +1,163 @@
-/* Global styling for Education & Experience section */
+/* Global Styles */
 .education-experience {
-    background-color: #f9f9f9;
-    padding: 3rem 1.5rem;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    text-transform: uppercase;
-    color: #333;
-  }
-  
+  background-color: #ffffff;
+  padding: 3rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+
+/* Section Heading Styles */
+.section-heading {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.176;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  margin-top: 0;
+  padding-top: 3.2rem;
+  position: relative;
+}
+
+/* Removed the following code block to remove the line under the heading */
+/* .section-heading::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2px;
+  background-color: #484AA9;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+
+/* Education & Experience Container */
+.education-experience-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Education Section */
+.education, .experience {
+  flex: 1;
+  min-width: 300px;
+}
+
+.timeline {
+  margin-left: 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px); /* Subtle hover effect */
+}
+
+.timeline-item .year {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4e73df;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item .institution,
+.timeline-item .degree,
+.timeline-item .event,
+.timeline-item .award {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.timeline-item .event {
+  font-weight: bold;
+  color: #333;
+}
+
+.timeline-item .award {
+  display: flex;
+  align-items: center;
+  color: #4e73df;
+}
+
+.timeline-item .award-icon {
+  margin-left: 0.5rem;
+  color: #FFD700; /* Gold color for the award */
+}
+
+/* Timeline Indicators */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.2rem;
+  top: 1rem;
+  width: 10px;
+  height: 10px;
+  background-color: #4e73df;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 0.3rem;
+  top: 2.2rem;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .education-experience-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-  
-  .education, .experience {
-    flex: 1;
-  }
-  
+
   .timeline {
-    margin-left: 0;
-    padding-left: 1.5rem;
-    position: relative;
+    padding-left: 0;
   }
-  
+
   .timeline-item {
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-    position: relative;
+    padding-left: 1.5rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
   .timeline-item .year {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #4e73df;
+    font-size: 1rem;
   }
-  
-  .timeline-item .institution,
-  .timeline-item .degree,
-  .timeline-item .event,
-  .timeline-item .award {
-    margin: 0.5rem 0;
+
+  .timeline-item .event, .timeline-item .award {
+    font-size: 0.9rem;
   }
-  
-  .timeline-item .event {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.5rem;
-    width: 10px;
-    height: 10px;
-    background-color: #4e73df;
-    border-radius: 50%;
-  }
-  
-  .timeline-item::after {
-    content: '';
-    position: absolute;
-    left: 0.3rem;
-    top: 2.2rem;
-    width: 1px;
-    height: 100%;
-    background-color: #ddd;
-  }
-  
-  .timeline-item:last-child::after {
-    display: none;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .education-experience-container {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .timeline {
-      padding-left: 0;
-    }
-  
-    .timeline-item {
-      padding-left: 1.5rem;
-    }
-  }
-  
+}

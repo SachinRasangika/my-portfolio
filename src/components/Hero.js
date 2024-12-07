@@ -1,16 +1,46 @@
 import React from 'react';
-import '../components/Hero.css';
-import HeroImage from '../assets/images/54.png'; // Imported image path
+import './Hero.css';
+import HeroImage from '../assets/images/54.png'; // Ensure this path is correct
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="hero-left">
-        <h2>Hello, I'm Sachin</h2>
-        <h1>Digital Designer<br/>and Web Developer<br/>Based In Somewhere</h1>
-      </div>
-      <div className="hero-right">
-        <img src={HeroImage} alt="Design sample" className="hero-image" /> {/* Use HeroImage here */}
+      <div className="hero-content">
+        {/* Text Section */}
+        <div className="hero-text">
+          <h2>Hey There,</h2>
+          <h1>
+            I’m <span className="highlight">Sachin Silva</span>,
+            <br />
+            <span className="dynamic-text">
+              <span>Digital Designer</span>
+              <span>Web Developer</span>
+              <span>Creative Innovator</span>
+            </span>
+          </h1>
+          <p>
+            Crafting impactful designs and seamless web experiences. Let’s work
+            together to bring your vision to life!
+          </p>
+          <div className="hero-buttons">
+            {/* Linking to About Me section */}
+            <a href="#about" className="btn btn-primary">
+              About Me
+            </a>
+
+            {/* Linking to Contact Me section */}
+            <a href="#contact" className="btn btn-secondary">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="hero-image-container">
+          <div className="image-wrapper">
+            <img src={HeroImage} alt="Showcase" className="hero-image" />
+          </div>
+        </div>
       </div>
     </section>
   );

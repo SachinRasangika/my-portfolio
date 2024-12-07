@@ -1,0 +1,52 @@
+.project-view {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f4f4f4;
+  margin-top: 60px; /* Adjust this value depending on your navbar height */
+}
+
+.project-details {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-details h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.project-summary {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.project-meta {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-meta p {
+  margin: 0.5rem 0;
+}
+
+.project-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-image img {
+  max-width: 80%; /* Limit width to avoid image quality drop */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
