@@ -11,8 +11,6 @@
   padding: 2rem;
 }
 
-
-
 /* Section Heading Styles */
 .section-heading {
   font-family: "Roboto", sans-serif;
@@ -25,18 +23,6 @@
   padding-top: 3.2rem;
   position: relative;
 }
-
-/* Removed the following code block to remove the line under the heading */
-/* .section-heading::before {
-  content: "";
-  display: block;
-  width: 150px;
-  height: 2px;
-  background-color: #484AA9;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
 
 /* Education & Experience Container */
 .education-experience-container {
@@ -90,6 +76,11 @@
   color: #333;
 }
 
+.timeline-item .institution {
+  font-weight: bold;
+  color: #333;
+}
+
 .timeline-item .award {
   display: flex;
   align-items: center;
@@ -126,6 +117,68 @@
 
 .timeline-item:last-child::after {
   display: none;
+}
+
+/* Image Link Styling */
+.image-link {
+  color: #4e73df;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.image-link:hover {
+  color: #2c5282;
+}
+
+/* Popup Styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Make the image fully fit inside the popup */
+  max-height: 90vh; /* Limit image height to the viewport height */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  color: #e74c3c;
 }
 
 /* Responsive Design */
