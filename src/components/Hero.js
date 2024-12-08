@@ -13,9 +13,9 @@ const Hero = () => {
             I’m <span className="highlight">Sachin Silva</span>,
             <br />
             <span className="dynamic-text">
-              <span>Digital Designer</span>
-              <span>Web Developer</span>
-              <span>Creative Innovator</span>
+              <span>UI/UX Designer</span>
+              <span>Front-End Developer</span>
+              <span>Fullstack  Developer</span>
             </span>
           </h1>
           <p>
