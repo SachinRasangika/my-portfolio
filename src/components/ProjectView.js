@@ -1,10 +1,12 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './ProjectView.css'; // Import the CSS for this component
+import './ProjectView.css';
 
 const ProjectView = () => {
   const location = useLocation();
-  const { project } = location.state || {}; // Access the project passed from the previous page
+  const { project } = location.state || {}; 
+
+  console.log(project); // Debug: Check if the project object is being passed correctly
 
   if (!project) {
     return <div>Project not found</div>;
@@ -13,12 +15,12 @@ const ProjectView = () => {
   return (
     <section className="project-view">
       <div className="project-details">
-        <h1>{project.name}</h1>
+        <h1>{project.title || 'Project Title'}</h1> {/* Fallback to "Project Title" if not found */}
 
         {/* Project Description */}
         <div
           className="project-summary"
-          dangerouslySetInnerHTML={{ __html: project.description }} // Render description with HTML
+          dangerouslySetInnerHTML={{ __html: project.description }}
         />
 
         {/* Project Image */}

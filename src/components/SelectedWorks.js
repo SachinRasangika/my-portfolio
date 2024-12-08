@@ -60,9 +60,9 @@ const SelectedWorks = () => {
         Stay tuned for further developments.
         
         To view the project, visit the following links:
-        GitHub: <a href="https://github.com/SachinRasangika/water-world-kelaniya.git" target="_blank" rel="noopener noreferrer">water-world-kelaniya</a>
+        <a href="https://github.com/SachinRasangika/water-world-kelaniya.git" target="_blank" rel="noopener noreferrer">GitHub: water-world-kelaniya</a>
         <br />
-        LinkedIn: <a href="https://www.linkedin.com/feed/update/urn:li:activity:7219907175328927744/" target="_blank" rel="noopener noreferrer">LinkedIn Post</a>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7219907175328927744/" target="_blank" rel="noopener noreferrer">LinkedIn Post</a>
       `,
       image: project4Image, // Use the new project image
       color: "#9b59b6", // Default color for the bottom bar

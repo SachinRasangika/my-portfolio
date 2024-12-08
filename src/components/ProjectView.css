@@ -50,3 +50,48 @@
   object-fit: cover;
   border-radius: 8px;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* Tablet */
+  .project-view {
+    padding: 1rem;
+  }
+
+  .project-details {
+    padding: 1.5rem;
+  }
+
+  .project-details h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-summary {
+    font-size: 1rem;
+  }
+
+  .project-image img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .project-view {
+    padding: 0.5rem;
+  }
+
+  .project-details {
+    padding: 1rem;
+  }
+
+  .project-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-summary {
+    font-size: 0.95rem;
+  }
+
+  .project-image img {
+    max-width: 100%;
+  }
+}
