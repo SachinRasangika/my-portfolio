@@ -16,7 +16,10 @@ const ProjectView = () => {
         <h1>{project.name}</h1>
 
         {/* Project Description */}
-        <p className="project-summary">{project.description}</p>
+        <div
+          className="project-summary"
+          dangerouslySetInnerHTML={{ __html: project.description }} // Render description with HTML
+        />
 
         {/* Project Image */}
         <div className="project-image">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Navbar.css';
 import logo from '../assets/images/logo.png';
 
@@ -12,21 +13,21 @@ const Navbar = () => {
   return (
     <header className="s-header">
       <div className="header-logo">
-        <a href="/">
+        <Link to="/my-portfolio/"> {/* Update to Link for SPA routing */}
           <img src={logo} alt="Design sample" className="logo" />
-        </a>
+        </Link>
       </div>
 
       <nav className={`header-nav-wrap ${isMenuOpen ? 'is-open' : ''}`}>
-  <ul className="header-main-nav">
-    <li><a className="smoothscroll" href="#intro">Intro</a></li>
-    <li><a className="smoothscroll" href="#about">About</a></li>
-    <li><a className="smoothscroll" href="#education">Education</a></li>
-    <li><a className="smoothscroll" href="#works">Works</a></li>
-    <li><a className="smoothscroll" href="#contact">Say Hello</a></li>
-  </ul>
-</nav>
-
+        <ul className="header-main-nav">
+          {/* Update the links to navigate to /my-portfolio/#intro */}
+          <li><a className="smoothscroll" href="/my-portfolio/#intro">Intro</a></li> 
+          <li><a className="smoothscroll" href="/my-portfolio/#about">About</a></li>
+          <li><a className="smoothscroll" href="/my-portfolio/#education">Education</a></li>
+          <li><a className="smoothscroll" href="/my-portfolio/#works">Works</a></li>
+          <li><a className="smoothscroll" href="/my-portfolio/#contact">Say Hello</a></li>
+        </ul>
+      </nav>
 
       <ul className="header-social">
         <li>

@@ -5,7 +5,7 @@ import EducationExperience from '../components/EducationExperience';
 import SelectedWorks from '../components/SelectedWorks';
 import Feedback from '../components/Feedback';
 import ContactMe from '../components/ContactMe';
-
+import Project from '../components/Project'; // Import the Project Component
 
 const Home = () => {
   return (
@@ -25,10 +25,15 @@ const Home = () => {
         <EducationExperience />
       </section>
 
-      {/* Selected Works Section */}
-      <section id="works">
-        <SelectedWorks />
+      {/* Projects Section */}
+      <section id="projects">
+        <Project />
       </section>
+
+      {/* Selected Works Section */}
+      {/* <section id="works">
+        <SelectedWorks />
+      </section> */}
 
       {/* Feedback Section */}
       <section id="feedback">
