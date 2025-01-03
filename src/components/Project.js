@@ -11,6 +11,7 @@ import p2 from "../assets/images/portfolio/redesignview.png";
 import p3 from "../assets/images/portfolio/wvw.png";
 import saralImage from "../assets/images/portfolio/saral.png";
 import project4Image from "../assets/images/portfolio/screencapture-localhost-3000-2024-12-08-03_31_59.png";
+import fit4LifeImage from "../assets/images/portfolio/fit4life.png";
 import { useNavigate } from "react-router-dom";
 
 const Project = () => {
@@ -75,6 +76,16 @@ const Project = () => {
         - [GitHub Repository: water-world-kelaniya](https://github.com/SachinRasangika/water-world-kelaniya.git)  
         - [LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:7219907175328927744/)`,
       image: project4Image,
+    },
+    {
+      title: "Fit4Life Fitness Tracker",
+      description: `Developed a fitness tracker web application that allows users to set goals, track workouts, and monitor progress.  
+        The project highlights include:  
+        - A dynamic dashboard with interactive charts.  
+        - Integration with wearable devices for real-time updates.  
+        - Focused on user-friendly design and accessibility.  
+        Skills: React · Node.js · Chart.js · CSS · API Integration.`,
+      image: fit4LifeImage,
     },
   ];
 
