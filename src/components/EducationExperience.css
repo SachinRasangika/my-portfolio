@@ -1,4 +1,3 @@
-/* Global Styles */
 .education-experience {
   background-color: #ffffff;
   padding: 3rem 1.5rem;
@@ -11,17 +10,15 @@
   padding: 2rem;
 }
 
-/* Section Heading Styles */
+/* Section Heading */
 .section-heading {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
-  line-height: 1.176;
   text-transform: uppercase;
   letter-spacing: .5rem;
   margin-top: 0;
   padding-top: 3.2rem;
-  position: relative;
 }
 
 /* Education & Experience Container */
@@ -32,14 +29,13 @@
   flex-wrap: wrap;
 }
 
-/* Education Section */
 .education, .experience {
   flex: 1;
   min-width: 300px;
 }
 
+/* Timeline */
 .timeline {
-  margin-left: 0;
   padding-left: 1.5rem;
   position: relative;
 }
@@ -52,28 +48,13 @@
 }
 
 .timeline-item:hover {
-  transform: translateX(10px); /* Subtle hover effect */
+  transform: translateX(10px);
 }
 
 .timeline-item .year {
   font-size: 1.2rem;
   font-weight: bold;
   color: #4e73df;
-  margin-bottom: 0.5rem;
-}
-
-.timeline-item .institution,
-.timeline-item .degree,
-.timeline-item .event,
-.timeline-item .award {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #666;
-}
-
-.timeline-item .event {
-  font-weight: bold;
-  color: #333;
 }
 
 .timeline-item .institution {
@@ -81,18 +62,11 @@
   color: #333;
 }
 
-.timeline-item .award {
-  display: flex;
-  align-items: center;
-  color: #4e73df;
+.timeline-item .degree {
+  font-size: 1rem;
+  color: #666;
 }
 
-.timeline-item .award-icon {
-  margin-left: 0.5rem;
-  color: #FFD700; /* Gold color for the award */
-}
-
-/* Timeline Indicators */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -102,7 +76,6 @@
   height: 10px;
   background-color: #4e73df;
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-item::after {
@@ -119,19 +92,49 @@
   display: none;
 }
 
-/* Image Link Styling */
-.image-link {
-  color: #4e73df;
+/* Achievements Section */
+.achievements-section {
+  margin-top: 3rem;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  text-align: center;
   cursor: pointer;
-  font-weight: bold;
-  margin-left: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.image-link:hover {
-  color: #2c5282;
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-/* Popup Styling */
+.trophy-icon {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-card h4 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.achievement-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Popup */
 .popup {
   position: fixed;
   top: 0;
@@ -146,25 +149,17 @@
 }
 
 .popup-content {
-  position: relative;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   max-width: 90%;
   max-height: 90%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .popup-content img {
-  width: 100%;
-  height: auto;
-  max-width: 100%; /* Make the image fully fit inside the popup */
-  max-height: 90vh; /* Limit image height to the viewport height */
+  max-width: 100%;
+  max-height: 90vh;
   object-fit: contain;
-  border-radius: 8px;
 }
 
 .close-popup {
@@ -177,40 +172,9 @@
   cursor: pointer;
 }
 
-.close-popup:hover {
-  color: #e74c3c;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
   .education-experience-container {
     flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .timeline {
-    padding-left: 0;
-  }
-
-  .timeline-item {
-    padding-left: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  .timeline-item .year {
-    font-size: 1rem;
-  }
-
-  .timeline-item .event, .timeline-item .award {
-    font-size: 0.9rem;
   }
 }

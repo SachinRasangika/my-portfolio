@@ -87,11 +87,23 @@ const Project = () => {
         Skills: React · Node.js · Chart.js · CSS · API Integration.`,
       image: fit4LifeImage,
     },
+    // Dummy project added here
+    {
+      title: "Dummy Project",
+      description: `This is a dummy project added for testing purposes.  
+        It showcases a simple project structure with a placeholder image and description.  
+        Skills: Placeholder · Example · Testing.`,
+      image: p1,  // Using p1 as dummy image (you can replace with any image you want)
+    },
   ];
 
-  // Handle "See More" button click to navigate to the project view page
+  // Updated handle "See More" click:
   const handleSeeMoreClick = (project) => {
-    navigate("/project-view", { state: { project } }); // Pass project data in state
+    if (project.title === "Dummy Project") {
+      navigate("/before-after-slider"); // Navigate to BeforeAfterSlider page
+    } else {
+      navigate("/project-view", { state: { project } }); // Pass project data in state
+    }
   };
 
   const handleClick = (index) => {
@@ -123,7 +135,7 @@ const Project = () => {
                     className="see-more-btn"
                     onClick={(e) => {
                       e.stopPropagation(); // Prevent card click handler
-                      handleSeeMoreClick(project); // Navigate to the project view
+                      handleSeeMoreClick(project); // Navigate accordingly
                     }}
                   >
                     See More

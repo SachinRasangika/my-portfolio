@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    max-width: 1400px;
+    height: calc(100vh - 80px); /* leave space below nav */
+    margin: 80px auto 40px; /* top margin for nav */
+    border-radius: 20px;
+    background: #fff; /* no shadow */
+    overflow: hidden; /* no scrolling outside */
+    user-select: none;
+}
+
+.image-wrapper {
+    flex: 2; /* increase flex to give more space to images */
+    overflow-y: auto;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    scroll-behavior: smooth;
+    max-height: 100%;
+}
+
+.image-wrapper:last-child {
+  border-right: none;
+}
+
+.image {
+  width: 100%;   /* take full width inside wrapper */
+  max-width: none; /* allow wide images */
+  height: auto;
+  border-radius: 16px;
+  user-select: none;
+  pointer-events: none;
+  object-fit: contain; /* scale images nicely */
+}
+
+.label {
+  position: sticky;
+  bottom: 0;
+  background: #fafafa;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid #e0e0e0;
+  user-select: none;
+  color: #333;
+}
+
+/* Scrollbars */
+.image-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.image-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.image-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.image-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.1) transparent;
+}

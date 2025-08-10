@@ -21,9 +21,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px; /* Adjust top space as needed */
-    margin-bottom: 20px; /* Adjust bottom space as needed */
-    width: 10%; /* Adjust size as needed */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 10%;
 }
 
 /* Section Title */
@@ -78,9 +78,15 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.5s ease-in-out; /* Smooth horizontal expansion */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     transform-origin: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Smooth lift + scale on hover */
+.item:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 /* Image inside the card */
@@ -88,6 +94,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Slight zoom effect on hover */
+.item:hover .game-image {
+    transform: scale(1.08);
 }
 
 /* Item Description */
@@ -105,7 +117,7 @@
 }
 
 .item:hover .item-desc {
-    transform: translateY(0); /* Slide up on hover */
+    transform: translateY(0);
 }
 
 /* Description Title */
@@ -142,8 +154,8 @@
 
 /* Expanded Card */
 .item.active {
-    max-width: 600px; /* Increase width on active state */
-    height: 450px; /* Adjust height for expanded state */
+    max-width: 600px;
+    height: 450px;
 }
 
 /* Responsive Design */
@@ -154,13 +166,13 @@
     }
 
     .slick-slider {
-        padding: 0 5px; /* Adjust the padding of the carousel for tablet */
+        padding: 0 5px;
     }
 }
 
 @media (max-width: 768px) {
     .game-section {
-        padding: 40px 15px; /* Reduce padding on mobile */
+        padding: 40px 15px;
     }
 
     .item {
@@ -177,11 +189,11 @@
     }
 
     .imoji-2 {
-        width: 15%; /* Make the avatar image bigger on mobile */
+        width: 15%;
     }
 
     .see-more-btn {
-        font-size: 12px; /* Adjust button font size */
+        font-size: 12px;
     }
 }
 
