@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.e37abc19.css",
-    "main.js": "/my-portfolio/static/js/main.bcad5540.js",
+    "main.css": "/my-portfolio/static/css/main.f4f0c2c9.css",
+    "main.js": "/my-portfolio/static/js/main.7067893c.js",
     "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
     "static/media/be.png": "/my-portfolio/static/media/be.448084b8a57984a49f27.png",
     "static/media/wvw.png": "/my-portfolio/static/media/wvw.015c324d96d6ce4d931e.png",
+    "static/media/taurgo.png": "/my-portfolio/static/media/taurgo.dcf5d05c2a1102c1ebab.png",
     "static/media/fit4life.png": "/my-portfolio/static/media/fit4life.ba8a23e1fdf06469b4a4.png",
     "static/media/screencapture-localhost-3000-2024-12-08-03_31_59.png": "/my-portfolio/static/media/screencapture-localhost-3000-2024-12-08-03_31_59.1422833871eddcd406aa.png",
     "static/media/saral.png": "/my-portfolio/static/media/saral.5fa76ba79ecd7e73cb62.png",
@@ -32,12 +33,12 @@
     "static/media/slick.ttf": "/my-portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/my-portfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/my-portfolio/index.html",
-    "main.e37abc19.css.map": "/my-portfolio/static/css/main.e37abc19.css.map",
-    "main.bcad5540.js.map": "/my-portfolio/static/js/main.bcad5540.js.map",
+    "main.f4f0c2c9.css.map": "/my-portfolio/static/css/main.f4f0c2c9.css.map",
+    "main.7067893c.js.map": "/my-portfolio/static/js/main.7067893c.js.map",
     "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e37abc19.css",
-    "static/js/main.bcad5540.js"
+    "static/css/main.f4f0c2c9.css",
+    "static/js/main.7067893c.js"
   ]
 }
