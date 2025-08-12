@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
-import './project.css'; // Import the updated CSS file
+import './project.css'; 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import avatarImage from '../assets/images/avatars/avatarslap.png';  // Correct path to the image
 
-// Importing the images correctly based on your provided paths
+import avatarImage from '../assets/images/avatars/avatarslap.png';
+
 import p1 from "../assets/images/portfolio/Frame 94.png";
 import p2 from "../assets/images/portfolio/redesignview.png";
 import p3 from "../assets/images/portfolio/wvw.png";
 import saralImage from "../assets/images/portfolio/saral.png";
 import project4Image from "../assets/images/portfolio/screencapture-localhost-3000-2024-12-08-03_31_59.png";
 import fit4LifeImage from "../assets/images/portfolio/fit4life.png";
+import taurgoImage from "../assets/images/portfolio/taurgo.png";
+import afImage from "../assets/images/af.png";
+
 import { useNavigate } from "react-router-dom";
 
 const Project = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const sliderRef = useRef(null);
   const navigate = useNavigate();
 
   const settings = {
@@ -24,20 +28,15 @@ const Project = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: false,  // autoplay off
     responsive: [
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
+        settings: { slidesToShow: 1 },
       },
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
+        settings: { slidesToShow: 2 },
       },
     ],
   };
@@ -87,22 +86,25 @@ const Project = () => {
         Skills: React · Node.js · Chart.js · CSS · API Integration.`,
       image: fit4LifeImage,
     },
-    // Dummy project added here
     {
-      title: "Dummy Project",
-      description: `This is a dummy project added for testing purposes.  
-        It showcases a simple project structure with a placeholder image and description.  
-        Skills: Placeholder · Example · Testing.`,
-      image: p1,  // Using p1 as dummy image (you can replace with any image you want)
+      title: "Taurgo SaaS Platform",
+      description: `Improved the Taurgo SaaS platform by redesigning the landing page, enhancing UI and user experience, and contributing to overall platform improvements.`,
+      image: taurgoImage,
+    },
+    {
+      title: "Transform Wellness - Dr. Bradford Perkins Homepage",
+      description: `Redesigned the homepage to create a premium, calming, and modern wellness experience.  
+      Focus areas: precision medicine, longevity, cognitive clarity, and personalized holistic care.  
+      Emphasized warm colors, serif headings, generous spacing, and clear visual hierarchy for trust and engagement.`,
+      image: afImage,
     },
   ];
 
-  // Updated handle "See More" click:
   const handleSeeMoreClick = (project) => {
-    if (project.title === "Dummy Project") {
-      navigate("/before-after-slider"); // Navigate to BeforeAfterSlider page
+    if (project.title === "Transform Wellness - Dr. Bradford Perkins Homepage") {
+      navigate("/before-after-slider");
     } else {
-      navigate("/project-view", { state: { project } }); // Pass project data in state
+      navigate("/project-view", { state: { project } });
     }
   };
 
@@ -117,31 +119,37 @@ const Project = () => {
         <p>Here are some of my recent works. Click to explore.</p>
         <img className="imoji-2" src={avatarImage} alt="Avatar" />
       </div>
-      <Slider {...settings}>
+
+      {/* Custom slider buttons */}
+      <div className="slider-buttons">
+        <button onClick={() => sliderRef.current.slickPrev()}>Prev</button>
+        <button onClick={() => sliderRef.current.slickNext()}>Next</button>
+      </div>
+
+      <Slider ref={sliderRef} {...settings}>
         {projects.map((project, index) => (
           <div
             key={index}
             className={`item ${activeIndex === index ? "active" : ""}`}
-            onClick={() => handleClick(index)} // Toggle project details
+            onClick={() => handleClick(index)}
           >
             <img src={project.image} alt={project.title} className="game-image" />
             <div className="item-desc">
               <h3>{project.title}</h3>
-              {activeIndex === index ? (
+              {activeIndex === index && (
                 <>
                   <p>{project.description}</p>
-                  {/* Trigger navigation only when the button is clicked */}
                   <button
                     className="see-more-btn"
                     onClick={(e) => {
-                      e.stopPropagation(); // Prevent card click handler
-                      handleSeeMoreClick(project); // Navigate accordingly
+                      e.stopPropagation();
+                      handleSeeMoreClick(project);
                     }}
                   >
                     See More
                   </button>
                 </>
-              ) : null}
+              )}
             </div>
           </div>
         ))}

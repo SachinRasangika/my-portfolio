@@ -11,7 +11,7 @@
     font-size: 1.5rem;
     line-height: 1.176;
     text-transform: uppercase;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
     margin-top: 0;
     padding-top: 3.2rem;
     position: relative;
@@ -197,13 +197,47 @@
     }
 }
 
-/* Slick Arrows */
+/* Slick Arrows Hidden (since we use custom buttons) */
 .slick-prev, .slick-next {
-    z-index: 10;
-    font-size: 20px;
-    color: #333;
+    display: none !important;
 }
 
-.slick-prev:hover, .slick-next:hover {
-    color: #ff6f61;
+/* Custom Prev/Next Buttons Container */
+.slider-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Custom Buttons Styling */
+.slider-buttons button {
+    background-color: #007aff;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 122, 255, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+/* Hover & Focus styles for accessibility */
+.slider-buttons button:hover,
+.slider-buttons button:focus {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 91, 181, 0.6);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+/* Active/Pressed effect */
+.slider-buttons button:active {
+    background-color: #004494;
+    box-shadow: 0 3px 6px rgba(0, 68, 148, 0.8);
+    transform: translateY(0);
 }
